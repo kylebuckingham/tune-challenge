@@ -1,0 +1,40 @@
+<div class="container">
+    <div id="fixed" class="row people" when-scrolled="loadMore()">
+
+        <!-- main iteration block -->
+        <div class="col-sm-6 col-md-4 person" ng-repeat="person in people track by $index">
+            <div class="thumbnail">
+
+                <!-- Heading text -->
+                <div class="header">
+                    <div class="avatar">
+                        <!-- on-error-src is a directive that kicks in if ng-src returns a 40[something] -->
+                        <img ng-show="person.avatar" ng-src="{{person.avatar}}" on-error-src>
+                        <div ng-show="!person.avatar" class="blank">
+                            <h3>{{person.name.charAt(0)}}</h3>
+                        </div>
+                    </div>
+                    <div class="caption">
+                        <h3>{{person.name}}</h3>
+                        <p>{{person.occupation}}</p>
+                    </div>
+                </div>
+
+                <!-- Graph -->
+                <div class="graph">
+                    <canvas height="100" id="line" class="chart chart-line" data="person.summary.chartData.data" labels="person.summary.chartData.labels" options="options" colours="colours"></canvas>
+                    <span>Conversions {{person.summary.start | date: 'M/d'}} - {{person.summary.end | date: 'M/d'}}</span>
+                </div>
+
+                <!-- Data Summary -->
+                <div class="summary">
+                    <p><span class="impressions">{{person.summary.impressions}}</span>
+                        <br/> impressions</p>
+                    <p><span class="conversions">{{person.summary.conversions}}</span>
+                        <br/> conversions</p>
+                    <p><span class="revenue">${{person.summary.revenue | number:0 }}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

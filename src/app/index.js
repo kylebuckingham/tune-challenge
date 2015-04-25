@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tuneApp', ['ngTouch', 'ngSanitize', 'ngResource', 'ngRoute', 'ui.bootstrap', 'processingModule', 'chart.js', 'customDirectives'])
+angular.module('tuneApp', ['ngTouch', 'ngRoute', 'ui.bootstrap', 'chart.js', 'processingModule',  'customDirectives'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

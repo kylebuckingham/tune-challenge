@@ -1,7 +1,7 @@
 # tune-challenge
 
 ######Show: 
-* gulp serve
+* gulp serve 
 
 ######Test: 
 * gulp test

@@ -117,7 +117,7 @@ $repeat: 6;
 @for $i from 1 through $repeat {
     .person:nth-child(#{length($colors) + 1}n+#{$i}) {
         .blank {
-          background: nth($colors, random(length($colors)+ 1));
+          background: nth($colors, random(length($colors)));
         }
     }
 }

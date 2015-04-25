@@ -1,6 +1,8 @@
 # tune-challenge
 
-######Show: 
+###### to run: 
+* npm install
+* bower install
 * gulp serve 
 
 ######Test: 
